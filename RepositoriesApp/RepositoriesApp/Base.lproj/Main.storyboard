@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repo View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="RepoViewController" id="BYZ-38-t0r" customClass="RepoViewController" customModule="RepositoriesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Wcs-XC-JRE">
+                                <rect key="frame" x="0.0" y="68" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Avaliable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B4-oQ-Pp7">
+                                <rect key="frame" x="126.33333333333333" y="413.66666666666669" width="140.66666666666669" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="oMs-CE-hTJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Hh-aW-rsp">
+                                <rect key="frame" x="0.0" y="134" width="393" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoTableViewCell" rowHeight="216" id="cuz-hl-Fvf" customClass="RepoTableViewCell" customModule="RepositoriesApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="216"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cuz-hl-Fvf" id="3jX-82-97f">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="216"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qv-ha-sJe">
+                                                    <rect key="frame" x="20" y="27" width="353" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="A5o-E3-ES7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMI-i4-Xkh">
+                                                    <rect key="frame" x="20" y="57" width="353" height="132"/>
+                                                    <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PMI-i4-Xkh" firstAttribute="top" secondItem="1Qv-ha-sJe" secondAttribute="bottom" constant="8" id="5Qb-lv-kgQ"/>
+                                                <constraint firstItem="1Qv-ha-sJe" firstAttribute="top" secondItem="3jX-82-97f" secondAttribute="topMargin" constant="15" id="EO1-59-SLO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PMI-i4-Xkh" secondAttribute="bottom" constant="15" id="TIG-ev-MMQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PMI-i4-Xkh" secondAttribute="trailing" id="cpd-6j-sEe"/>
+                                                <constraint firstItem="1Qv-ha-sJe" firstAttribute="leading" secondItem="3jX-82-97f" secondAttribute="leadingMargin" id="mjx-bh-0tx"/>
+                                                <constraint firstItem="PMI-i4-Xkh" firstAttribute="leading" secondItem="3jX-82-97f" secondAttribute="leadingMargin" id="vvv-PQ-7Hq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1Qv-ha-sJe" secondAttribute="trailing" id="xXM-Be-gOx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descTxt" destination="PMI-i4-Xkh" id="ORR-1O-vxE"/>
+                                            <outlet property="titleTxt" destination="1Qv-ha-sJe" id="t5q-4J-sho"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zUn-ka-19M"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="l3x-Ko-wew"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0B4-oQ-Pp7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4QK-Ao-rU5"/>
+                            <constraint firstItem="8Hh-aW-rsp" firstAttribute="top" secondItem="Wcs-XC-JRE" secondAttribute="bottom" constant="10" id="8To-io-w4M"/>
+                            <constraint firstAttribute="bottom" secondItem="8Hh-aW-rsp" secondAttribute="bottom" id="8eg-Eh-1YM"/>
+                            <constraint firstItem="0B4-oQ-Pp7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FyI-Ph-D8Q"/>
+                            <constraint firstItem="8Hh-aW-rsp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HEt-XZ-B4Z"/>
+                            <constraint firstItem="Wcs-XC-JRE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="68" id="Jpt-w6-46d"/>
+                            <constraint firstItem="Wcs-XC-JRE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YYO-CO-uSq"/>
+                            <constraint firstItem="Wcs-XC-JRE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f3C-h3-hxh"/>
+                            <constraint firstItem="8Hh-aW-rsp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oJW-Ou-FSm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="repoTableView" destination="8Hh-aW-rsp" id="Vsv-dU-UjN"/>
+                        <outlet property="searchRepo" destination="Wcs-XC-JRE" id="zje-W1-Wc7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87.786259541984734" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
